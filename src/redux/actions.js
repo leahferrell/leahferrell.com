@@ -1,0 +1,1 @@
+export const TOGGLED_DARK_MODE = "TOGGLED_DARK_MODE";
