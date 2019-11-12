@@ -4,10 +4,13 @@ import styled from 'styled-components';
 import GridContainer from "../components/grid/container";
 import GridBody from "../components/grid/body";
 import GridArea from "../components/grid/area";
-import {font} from "../config/theme";
+import {font, SHADOWS} from "../config/theme";
 
 const HeaderBody = styled(GridBody)`
   padding: 50px 0 20px 0;
+  box-shadow: ${SHADOWS.NONE};
+  z-index: 2;
+  min-height: 50%;
 `;
 
 const HeaderContainer = styled(GridContainer)`
@@ -19,7 +22,7 @@ const HeaderElement = styled(GridArea)`
 `;
 
 const HeaderTitle = styled(HeaderElement)`
-  font-size: ${font.size.med_large}
+  font-size: ${font.size.x_large}
 `;
 
 const HeaderSubtitle = styled(HeaderElement)`

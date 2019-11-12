@@ -1,0 +1,127 @@
+{
+  "header": {
+    "title": "Leah Ferrell",
+    "subtitle": "Software Engineer; Cat Lover; Artist; Lego Fanatic"
+  },
+  "navigation": {
+    "links": [
+      {
+        "title": "about",
+        "href": "#about"
+      },
+      {
+        "title": "blog",
+        "href": "#blog"
+      },
+      {
+        "title": "projects",
+        "href": "#projects"
+      },
+      {
+        "title": "contact",
+        "href": "#contact"
+      },
+      {
+        "title": "resume",
+        "href": "#resume"
+      }
+    ],
+    "articles": {
+      "skills": {
+        "title": "Skills",
+        "subtitle": "These are some projects that I have been working on. Click on the cards for more information.",
+        "content": "stuff i know"
+      },
+      "projects": {
+        "title": "Projects",
+        "subtitle": "These are some projects that I have been working on. Click on the cards for more information.",
+        "content": [
+          {
+            "title": "Tetris",
+            "link": "http://github.com/leahthecatlady/tetris",
+            "technologies": ["react","redux","javascript","html"],
+            "description": "simple tetris game made to learn redux",
+            "image": ""
+          },
+          {
+            "title": "Intel 8080 Emulator",
+            "link": "http://github.com/leahthecatlady/intel_8080_emulator",
+            "technologies": ["rust"],
+            "description": "intel 8080 emulator made to learn rust",
+            "image": ""
+          }
+        ]
+      },
+      "learning": {
+        "title": "Learning",
+        "subtitle": "These are some projects that I have been working on. Click on the cards for more information.",
+        "content": [
+          {
+            "title": "tech",
+            "items": [
+              {
+                "name": "React",
+                "started": true
+              },
+              {
+                "name": "Rust",
+                "started": true
+              }
+            ]
+          },
+          {
+            "title": "books",
+            "items": [
+              {
+                "name": "Clean Code",
+                "started": true
+              },
+              {
+                "name": "Clean Architecture",
+                "started": true
+              }
+            ]
+          }
+        ]
+      },
+      "blog": {
+        "title": "Blog",
+        "subtitle": "These are some projects that I have been working on. Click on the cards for more information.",
+        "content": [
+          {
+            "title": "something",
+            "snippet": "something else",
+            "link": "link me",
+            "tags": ["tag1","tag2"]
+          },{
+            "title": "something",
+            "snippet": "something else",
+            "link": "link me",
+            "tags": ["tag"]
+          },{
+            "title": "something",
+            "snippet": "something else",
+            "link": "link me",
+            "tags": []
+          }
+        ]
+      },
+      "contact": {
+        "title": "Contact Me",
+        "subtitle": "These are some projects that I have been working on. Click on the cards for more information.",
+        "content": {
+          "phone": "2142821677",
+          "email": "leahferrell03@gmail.com"
+        }
+      }
+    }
+  },
+  "footer": {
+    "connect": {
+      "github": "http://www.github.com/leahthecatlady",
+      "linkedin": "someurlhere"
+    },
+    "text": "created by leah ferrell",
+    "source": "http://www.github.com/leahthecatlady/leahferrell.com"
+  }
+}

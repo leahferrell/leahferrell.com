@@ -1,14 +1,15 @@
 import React from 'react';
 import Container from "./container";
-import {ContentArea, FooterArea, HeaderArea, MenuArea, NavArea} from "./container/elements";
+import {ContentArea, FooterArea, HeaderArea, NavArea} from "./container/elements";
 import PropTypes from 'prop-types';
 import selectPage from "../redux/selectors/page";
 import {connect} from "react-redux";
 import GlobalStyle from "./global-style";
 import NavBar from "./navbar";
 import Header from "./header";
-import Menu from "./menu";
 import Footer from "./footer";
+import {selectLinks} from "../data/selector/link";
+import selectFooter from "../data/selector/footer";
 
 const Layout = ({content, mode}) => {
   return (
@@ -16,34 +17,15 @@ const Layout = ({content, mode}) => {
       <GlobalStyle mode={mode}/>
       <NavArea mode={mode}>
         <NavBar
-          links={[
-            {
-              href: "/",
-              name: "LEGO",
-              isTitle: true
-            },
-            {
-              href: "/account",
-              name: "ACCOUNT",
-              isTitle: false
-            },
-            {
-              href: "/collection",
-              name: "COLLECTION",
-              isTitle: false
-            }
-          ]}
+          links={selectLinks()}
         />
       </NavArea>
       <HeaderArea mode={mode}>
         <Header/>
       </HeaderArea>
-      <MenuArea mode={mode}>
-        <Menu/>
-      </MenuArea>
       <ContentArea mode={mode}>{content}</ContentArea>
       <FooterArea mode={mode}>
-        <Footer/>
+        <Footer {...selectFooter()} />
       </FooterArea>
     </Container>
   );

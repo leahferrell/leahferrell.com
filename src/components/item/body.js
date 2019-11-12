@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import {PageContainerElement} from "../../pages/default";
+import {PageContainerElement} from "../page";
 import {components} from "../../config/theme";
 
 const ItemBody = styled(PageContainerElement)`

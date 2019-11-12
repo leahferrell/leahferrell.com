@@ -5,7 +5,7 @@ const ContainerElement = styled.div`
   display: flex;
   justify-content: center;
   align-items: unset;
-  font-size: ${font.size.large};
+  font-size: ${font.size.small};
   color: ${props => font.color[props.mode]};
   font-family: ${font.family};
 `;
@@ -13,16 +13,15 @@ const ContainerElement = styled.div`
 export const NavArea = styled(ContainerElement)`
   grid-area: n;
   background-color: ${props => layout.nav[props.mode]};
+  z-index: 5;
+  position: relative;
+  top: 0;
 `;
 
 export const HeaderArea = styled(ContainerElement)`
   grid-area: h;
   background-color: ${props => layout.header[props.mode]};
-`;
-
-export const MenuArea = styled(ContainerElement)`
-  grid-area: m;
-  background-color: ${props => layout.menu[props.mode]};
+  height: 800px;
 `;
 
 export const ContentArea = styled(ContainerElement)`

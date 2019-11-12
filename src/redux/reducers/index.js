@@ -1,13 +1,12 @@
 import {combineReducers} from "redux";
-import {ITEM_RESULTS_PAGE} from "../../pages/item-results";
-import items, {initialState as initialItems} from "./items";
 import {DARK_MODE, DEFAULT_MODE, LIGHT_MODE} from "../../config/theme";
 import {TOGGLED_DARK_MODE} from "../actions";
+import {HOME_PAGE} from "../../pages/home";
 
 export const initialPage = {
-  name: ITEM_RESULTS_PAGE,
-  title: "Search Results",
-  subtitle: "showing results for xyz"
+  name: HOME_PAGE,
+  title: "Leah Ferrell",
+  subtitle: "Software Engineer; Cat Lover; Artist; Lego Fanatic"
 };
 
 export const initialMenu = {
@@ -18,7 +17,6 @@ export const initialMode = DEFAULT_MODE;
 
 export const initialState = {
   page: initialPage,
-  items: initialItems,
   mode: initialMode,
   menu: initialMenu
 };
@@ -42,7 +40,6 @@ const page = (state = initialPage, action) => {
 
 const rootReducer = combineReducers({
   page,
-  items,
   mode,
   menu
 });

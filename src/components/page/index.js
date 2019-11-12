@@ -1,7 +1,5 @@
-import styled from 'styled-components';
-
-import React from 'react';
-import {font} from "../config/theme";
+import styled from "styled-components";
+import {font} from "../../config/theme";
 
 export const PageBody = styled.div`
   padding: 0;
@@ -24,15 +22,3 @@ export const PageContainerElement = styled.div`
   font-family: ${font.family};
   height: auto;
 `;
-
-const DefaultPage = () => {
-  return (
-    <PageBody>
-      <PageContainer>
-        Testing...
-      </PageContainer>
-    </PageBody>
-  );
-};
-
-export default DefaultPage;

@@ -3,38 +3,74 @@ import styled from "styled-components";
 import GridBody from "../components/grid/body";
 import GridContainer from "../components/grid/container";
 import GridArea from "../components/grid/area";
-import {font} from "../config/theme";
+import {COLORS, font, SHADOWS} from "../config/theme";
+import {FaGithub, FaLinkedin} from "react-icons/fa";
+import {IoIosHeart} from "react-icons/io";
+import {DefaultLink} from "../components/link";
 
 const FooterBody = styled(GridBody)`
-  padding: 50px 0 20px 0;
+  padding: 50px 30px 20px 30px;
+  box-shadow: ${SHADOWS.NONE};
+  z-index: 2;
 `;
 
 const FooterContainer = styled(GridContainer)`
   align-items: center;
+  grid-template-columns: repeat(3, 1fr);
 `;
 
-const FooterElement = styled(GridArea)`
-  padding: 10px 0;
+const FooterSection = styled(GridArea)`
+  text-align: inherit;
+  font-size: ${font.size.small}
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 `;
 
-const FooterTitle = styled(FooterElement)`
-  font-size: ${font.size.med_large}
+const FooterLink = styled(DefaultLink)`
+  margin: 0;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 `;
 
-const FooterSubtitle = styled(FooterElement)`
-  font-size: ${font.size.medium}
+const FooterIcon = styled(FooterLink)`
+  font-size: ${font.size.medium};
+  margin: 0 10px;
 `;
 
-const Footer = () => {
+const LeftSection = styled(FooterSection)`
+  justify-content: flex-start;
+`;
+
+const RightSection = styled(FooterSection)`
+  justify-content: flex-end;
+`;
+
+const CenterSection = styled(FooterSection)`
+  text-align: center;
+  color: ${COLORS.LIGHT_BLUE};
+`;
+
+const Footer = ({connect, text, source}) => {
   return (
     <FooterBody>
       <FooterContainer>
-        <FooterTitle>
-          footer title
-        </FooterTitle>
-        <FooterSubtitle>
-          footer subtitle
-        </FooterSubtitle>
+        <LeftSection>
+          <FooterLink href={source}>{text}</FooterLink>
+        </LeftSection>
+        <CenterSection>
+          <IoIosHeart/>
+        </CenterSection>
+        <RightSection>
+          <FooterIcon href={connect.github}>
+            <FaGithub/>
+          </FooterIcon>
+          <FooterIcon href={connect.linkedin}>
+            <FaLinkedin/>
+          </FooterIcon>
+        </RightSection>
       </FooterContainer>
     </FooterBody>
   );
