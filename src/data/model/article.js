@@ -3,7 +3,12 @@ import PropTypes from "prop-types";
 /*
 * skills
 * */
-export const skillsContent = PropTypes.string.isRequired;
+export const skillContent = {
+  name: PropTypes.string,
+  items: PropTypes.arrayOf(PropTypes.string)
+};
+
+export const skillContentList = PropTypes.arrayOf(PropTypes.shape(skillContent));
 
 /*
 * project

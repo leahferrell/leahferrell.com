@@ -1,6 +1,7 @@
 import React from "react";
-import {Description, Tag, Tags, Title} from "./elements";
+import {Description, Tags, Title} from "./elements";
 import {CardArea, CardBody, CardContainer} from "./container";
+import {Tag} from "../words/tag";
 
 const Card = ({title, link, description, tags}) => {
   return (

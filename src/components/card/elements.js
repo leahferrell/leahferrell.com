@@ -6,7 +6,7 @@ export const Title = styled(GridArea)`
   grid-area: pt;
   text-align: left;
   background-color: ${COLORS.DARKER_GREY}
-  padding: 10px 15px;
+  padding: 0.75rem 1rem;
   border-radius: 5px 5px 0 0;
   font-size: ${font.size.medium};
   box-sizing: border-box;
@@ -43,19 +43,4 @@ export const Tags = styled(GridArea)`
   padding: 0px 0px 5px 10px;
   min-height: 3rem;
   align-content: center;
-`;
-
-export const Tag = styled.span`
-  margin-right: 5px;
-  margin-top: 5px;
-  background-color: ${COLORS.LIGHTER_GREY}
-  padding: 5px 10px;
-  border-radius: 2px;
-  font-size: ${font.size.small}
-  display: inline-block;
-  
-  :hover, :focus {
-    background-color: ${COLORS.LIGHT_YELLOW};
-    cursor: pointer;
-  }
 `;

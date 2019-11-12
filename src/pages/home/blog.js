@@ -18,7 +18,6 @@ const Blog = ({title, subtitle, content}) => {
   return (
     <Article>
       <h2>{title}</h2>
-      <p>{subtitle}</p>
       <BlogContainer>
         {content.map((c,i) => (
           <Card

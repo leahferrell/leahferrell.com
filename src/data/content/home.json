@@ -30,7 +30,16 @@
       "skills": {
         "title": "Skills",
         "subtitle": "These are some projects that I have been working on. Click on the cards for more information.",
-        "content": "stuff i know"
+        "content": [
+          {
+            "name": "Languages",
+            "items": ["javascript","java","scala","python","rust","bash","groovy","html"]
+          },
+          {
+            "name":"Frameworks",
+            "items": ["spring","react"]
+          }
+        ]
       },
       "projects": {
         "title": "Projects",
