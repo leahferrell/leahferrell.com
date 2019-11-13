@@ -119,7 +119,7 @@ export const components = {
       },
       hover: {
         background: [COLORS.LIGHT_GREEN,COLORS.LIGHT_BLUE],
-        font: [COLORS.BLACK, COLORS.LIGHTEST_GREY]
+        font: [COLORS.WHITE, COLORS.LIGHTEST_GREY]
       }
     }
   },
