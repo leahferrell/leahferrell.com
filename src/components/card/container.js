@@ -2,7 +2,7 @@ import styled from "styled-components";
 import GridArea from "../grid/area";
 import GridBody from "../grid/body";
 import GridContainer from "../grid/container";
-import {COLORS, SHADOWS} from "../../config/theme";
+import {components, SHADOWS} from "../../config/theme";
 
 export const CardArea = styled(GridArea)`
   width: 100%;
@@ -27,7 +27,7 @@ export const CardContainer = styled(GridContainer)`
     "pt pt pt"
     "pd pd pd"
     "py py py";
-  background-color: ${COLORS.LIGHTEST_GREY}
+  background-color: ${props => components.card.body.color[props.mode]};
   margin-bottom: 1rem;
   border-radius: 5px;
   align-items: flex-start;
@@ -38,6 +38,6 @@ export const CardContainer = styled(GridContainer)`
   }
   
   :hover .title {
-    background-color: ${COLORS.LIGHT_BLUE};
+    background-color: ${props => components.card.title.hover.background[props.mode]};
   }
 `;

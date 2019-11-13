@@ -6,21 +6,28 @@ import Blog from "./blog";
 import Contact from "./contact";
 import {selectArticle} from "../../data/selector/article";
 import {HomePageBody, HomePageContainer} from "./article";
+import {connect} from "react-redux";
 
 export const HOME_PAGE = "HOME_PAGE";
 
-const HomePage = () => {
+const HomePage = ({mode}) => {
   return (
     <HomePageBody>
       <HomePageContainer>
-        <Skills {...selectArticle("skills")}/>
-        <Projects {...selectArticle("projects")}/>
-        <Learning {...selectArticle("learning")}/>
-        <Blog {...selectArticle("blog")}/>
-        <Contact {...selectArticle("contact")}/>
+        <Skills {...selectArticle("skills")} mode={mode} />
+        <Projects {...selectArticle("projects")} mode={mode} />
+        <Learning {...selectArticle("learning")} mode={mode} />
+        <Blog {...selectArticle("blog")} mode={mode} />
+        <Contact {...selectArticle("contact")} mode={mode} />
       </HomePageContainer>
     </HomePageBody>
   );
 };
 
-export default HomePage;
+const mapStateToProps = (state) => ({
+  mode: state.mode
+});
+
+export default connect(
+  mapStateToProps
+)(HomePage);

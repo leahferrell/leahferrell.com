@@ -1,9 +1,9 @@
 import React from "react";
 import {Article} from "./article";
 
-const Contact = ({title, subtitle, content}) => {
+const Contact = ({title, subtitle, content, mode}) => {
   return (
-    <Article>
+    <Article mode={mode}>
       <h2>{title}</h2>
       <p>{subtitle}</p>
     </Article>

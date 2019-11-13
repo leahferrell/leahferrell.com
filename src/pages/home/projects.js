@@ -14,9 +14,9 @@ const ProjectContainer = styled(GridContainer)`
   width: auto;
 `;
 
-const Projects = ({title, subtitle, content}) => {
+const Projects = ({title, subtitle, content, mode}) => {
   return (
-    <Article>
+    <Article mode={mode}>
       <h2>{title}</h2>
       <ProjectContainer>
         {content.map(c => (
@@ -24,6 +24,7 @@ const Projects = ({title, subtitle, content}) => {
             key={c.title} title={c.title}
             description={c.description}
             link={c.link} tags={c.technologies}
+            mode={mode}
           />
           ))}
       </ProjectContainer>

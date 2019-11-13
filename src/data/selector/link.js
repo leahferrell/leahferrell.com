@@ -1,20 +1,21 @@
 import home from '../content/home.json';
 import React from "react";
 import {link, links, LinkType} from "../model/link";
-import {NavBarItem, NavBarLink, NavBarTitle} from "../../layout/navbar/container-elements";
+import {NavBarItem, NavBarTitle} from "../../layout/navbar/container-elements";
+import {DefaultLink} from "../../components/link";
 
 export const selectLink = (link, isExpanded) => {
   switch(link.type){
     case LinkType.TITLE:
       return (
         <NavBarTitle key={link.name}>
-          <NavBarLink href={link.href}>{link.name}</NavBarLink>
+          <DefaultLink href={link.href}>{link.name}</DefaultLink>
         </NavBarTitle>
       );
     default:
       return (
         <NavBarItem isExpanded={link.isExpanded || isExpanded} key={link.name}>
-          <NavBarLink href={link.href}>{link.name}</NavBarLink>
+          <DefaultLink href={link.href}>{link.name}</DefaultLink>
         </NavBarItem>
       );
   }

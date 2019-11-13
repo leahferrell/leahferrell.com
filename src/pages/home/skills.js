@@ -6,7 +6,7 @@ import styled from "styled-components";
 import GridContainer from "../../components/grid/container";
 import GridArea from "../../components/grid/area";
 import {Tag} from "../../components/words/tag";
-import {COLORS, font, SHADOWS, viewport} from "../../config/theme";
+import {components, SHADOWS, viewport} from "../../config/theme";
 
 const SkillsContainer = styled(GridContainer)`
   grid-template-columns: 1fr 5fr;
@@ -27,8 +27,8 @@ const SkillsTitle = styled(GridArea)`
   justify-content: flex-end;
   border-radius: 5px 0px 0px 5px;
   display: flex;
-  background-color: ${COLORS.DARKER_GREY};
-  color: ${font.color.dark};
+  background-color: ${props => components.card.title.background[props.mode]};
+  color: ${props => components.card.title.font.color[props.mode]};
   padding: 0.75rem 1rem;
   box-sizing: border-box;
   align-items: center;
@@ -38,7 +38,7 @@ const SkillsTitle = styled(GridArea)`
     justify-content: flex-start;
     border-radius: 5px 5px 0 0;
     box-shadow: ${SHADOWS.LIGHT};
-    font-size: ${font.size.medium};
+    font-size: ${components.card.title.font.size};
   }
 `;
 
@@ -47,10 +47,11 @@ const SkillsItems = styled(GridArea)`
   width: 100%;
   box-sizing: border-box;
   text-align: left;
-  border: 1px solid ${COLORS.LIGHTER_GREY};
+  border: 1px solid ${props => components.card.tag.border.color[props.mode]};
   padding: 5px 0px 5px 10px;
   align-items: center;
   display: flex-inline;
+  background-color: transparent;
   
   @media(max-height: ${viewport.medium}){
     margin-bottom: 1rem;
@@ -64,15 +65,15 @@ const SkillsItems = styled(GridArea)`
   }
 `;
 
-const Skills = ({title, content}) => {
+const Skills = ({title, content, mode}) => {
   return (
-    <Article>
+    <Article mode={mode}>
       <h2>{title}</h2>
       <SkillsContainer>
         {content.map(c => (
           <>
-            <SkillsTitle>{c.name}</SkillsTitle>
-            <SkillsItems>{c.items.map(i => <Tag>{i}</Tag>)}</SkillsItems>
+            <SkillsTitle mode={mode}>{c.name}</SkillsTitle>
+            <SkillsItems mode={mode}>{c.items.map(i => <Tag mode={mode}>{i}</Tag>)}</SkillsItems>
           </>
         ))}
       </SkillsContainer>
@@ -82,7 +83,8 @@ const Skills = ({title, content}) => {
 
 Skills.propTypes = {
   title: PropTypes.string.isRequired,
-  content: skillContentList
+  content: skillContentList,
+  mode: PropTypes.string
 };
 
 export default Skills;

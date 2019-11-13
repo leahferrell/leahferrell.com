@@ -44,12 +44,3 @@ export const NavBarModeButton = styled(IconButton)`
     display: flex;
   }
 `;
-
-export const NavBarLink = styled.a`
-  text-decoration: none;
-  color: inherit;
-  
-  :hover {
-    text-decoration: underline;
-  }
-`;

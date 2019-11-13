@@ -14,9 +14,9 @@ const BlogContainer = styled(GridContainer)`
   width: auto;
 `;
 
-const Blog = ({title, subtitle, content}) => {
+const Blog = ({title, subtitle, content, mode}) => {
   return (
-    <Article>
+    <Article mode={mode}>
       <h2>{title}</h2>
       <BlogContainer>
         {content.map((c,i) => (
@@ -24,6 +24,7 @@ const Blog = ({title, subtitle, content}) => {
             key={i + "-" + c.title} title={c.title}
             description={c.snippet}
             link={c.link} tags={c.tags}
+            mode={mode}
           />
         ))}
       </BlogContainer>
