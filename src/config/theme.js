@@ -1,7 +1,7 @@
 export const LIGHT_MODE = 0;
 export const DARK_MODE = 1;
 
-export const DEFAULT_MODE = DARK_MODE;
+export const DEFAULT_MODE = LIGHT_MODE;
 
 export const COLORS = {
   LIGHT_YELLOW: "#ffeead",
