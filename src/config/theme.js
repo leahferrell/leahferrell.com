@@ -97,8 +97,8 @@ export const components = {
         color: [COLORS.WHITE,COLORS.LIGHTEST_GREY]
       },
       hover: {
-        background: [COLORS.LIGHT_BLUE,COLORS.SLIGHTLY_DARKER_GREY],
-        font: [COLORS.WHITE, COLORS.LIGHT_YELLOW]
+        background: [COLORS.DARK_GREY,COLORS.SLIGHTLY_DARKER_GREY],
+        font: [COLORS.LIGHT_GREEN, COLORS.LIGHT_BLUE]
       }
     },
     body: {
@@ -118,7 +118,7 @@ export const components = {
         color: [COLORS.LIGHTER_GREY,COLORS.DARKER_GREY]
       },
       hover: {
-        background: [COLORS.LIGHT_YELLOW,COLORS.LIGHT_BLUE],
+        background: [COLORS.LIGHT_GREEN,COLORS.LIGHT_BLUE],
         font: [COLORS.BLACK, COLORS.LIGHTEST_GREY]
       }
     }
