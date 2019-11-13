@@ -12,7 +12,7 @@ export const HomePageContainer = styled(PageContainer)`
   grid-template-rows: repeat(auto-fit, 1fr);
   justify-items: center;
   padding: 0;
-  grid-gap: 1rem;
+  grid-gap: 4rem;
 `;
 
 export const Article = styled(PageContainerElement)`

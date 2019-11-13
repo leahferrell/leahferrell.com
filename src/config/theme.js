@@ -14,6 +14,7 @@ export const COLORS = {
   RED: "#b22420",
   YELLOW: "#f8d047",
   BLUE: "#2b6db2",
+  ACTUAL_BLACK: "#000",
   BLACKER_BLACK: "#111",
   BLACK: "#151515",
   DARKEST_GREY: "#1b1b1b",
@@ -62,19 +63,19 @@ export const viewport = {
 };
 
 export const layout = {
-  background: [COLORS.LIGHTEST_GREY,COLORS.BLACK],
+  background: [COLORS.LIGHTEST_GREY,COLORS.BLACKER_BLACK],
   nav: {
     background: [COLORS.WHITE,COLORS.DARKER_GREY],
     border: [COLORS.BLACK,COLORS.BLACK]
   },
   header: {
-    background: [COLORS.LIGHTEST_GREY,COLORS.BLACK]
+    background: [COLORS.LIGHTEST_GREY,COLORS.BLACKER_BLACK]
   },
   content: {
-    background: [COLORS.LIGHTEST_GREY,COLORS.BLACK]
+    background: [COLORS.LIGHTEST_GREY,COLORS.BLACKER_BLACK]
   },
   footer: {
-    background: [COLORS.LIGHTEST_GREY,COLORS.BLACK],
+    background: [COLORS.LIGHTEST_GREY,COLORS.BLACKER_BLACK],
     font: {
       color: [COLORS.BLACK,COLORS.WHITE],
       size: font.size.small
@@ -117,7 +118,7 @@ export const components = {
         color: [COLORS.LIGHTER_GREY,COLORS.DARKER_GREY]
       },
       hover: {
-        background: [COLORS.LIGHT_YELLOW,COLORS.GREY],
+        background: [COLORS.LIGHT_YELLOW,COLORS.LIGHT_BLUE],
         font: [COLORS.BLACK, COLORS.LIGHTEST_GREY]
       }
     }

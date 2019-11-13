@@ -54,7 +54,7 @@ const SkillsItems = styled(GridArea)`
   background-color: transparent;
   
   @media(max-height: ${viewport.medium}){
-    margin-bottom: 1rem;
+    margin-bottom: 2rem;
     border-radius: 0 0 5px 5px;
     box-shadow: ${SHADOWS.LIGHT};
     border: none;
